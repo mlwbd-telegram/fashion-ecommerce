@@ -456,3 +456,32 @@ p {
 .hidden {
   display: none;
 }
+
+/* =========================
+   SIZE SELECTION (PRODUCT)
+   ========================= */
+
+.size-options {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.size-btn {
+  padding: 10px 16px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.size-btn:hover {
+  border-color: #000;
+}
+
+.size-btn.active {
+  background-color: #1a1a1a;
+  color: #fff;
+  border-color: #1a1a1a;
+}
