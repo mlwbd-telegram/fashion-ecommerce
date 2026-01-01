@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StyleHub - Premium Fashion E-commerce</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header/Navbar -->
+  <header class="header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo">StyleHub</a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="shop.html" class="nav-link">Shop</a></li>
+      </ul>
+      
+      <div class="nav-links">
+        <a href="cart.html" class="cart-icon">
+          <span>🛒</span>
+          <span class="cart-count"></span>
+        </a>
+      </div>
+      
+      <button class="menu-toggle">☰</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content text-center">
+        <h1>Elevate Your Style</h1>
+        <p class="hero-subtitle">Discover the latest fashion trends and premium quality clothing</p>
+        <button class="btn btn-primary" id="shop-now-btn">Shop Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section class="featured-products">
+    <div class="container">
+      <h2 class="text-center">Featured Products</h2>
+      <div class="grid grid-cols-4" id="products-grid">
+        <!-- Products will be loaded here dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Callout Section -->
+  <section class="brand-callout">
+    <div class="container">
+      <div class="text-center">
+        <h3>Quality & Fashion</h3>
+        <p>We believe in delivering premium quality fashion that makes you feel confident and stylish. Every piece is carefully selected to ensure the best quality and design.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 StyleHub. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Hero section button functionality
+    document.getElementById('shop-now-btn').addEventListener('click', function() {
+      window.FashionEcommerce.Navigation.goToPage('shop');
+    });
+
+    // Mock product data (will be replaced by API call later)
+    const mockProducts = [
+      {
+        id: 1,
+        name: 'Premium Cotton T-Shirt',
+        price: 29.99,
+        image: 'https://via.placeholder.com/300x300?text=T-Shirt',
+        description: 'Comfortable cotton t-shirt for everyday wear'
+      },
+      {
+        id: 2,
+        name: 'Designer Jeans',
+        price: 89.99,
+        image: 'https://via.placeholder.com/300x300?text=Jeans',
+        description: 'Stylish denim jeans with perfect fit'
+      },
+      {
+        id: 3,
+        name: 'Casual Jacket',
+        price: 129.99,
+        image: 'https://via.placeholder.com/300x300?text=Jacket',
+        description: 'Lightweight jacket for casual occasions'
+      },
+      {
+        id: 4,
+        name: 'Summer Dress',
+        price: 79.99,
+        image: 'https://via.placeholder.com/300x300?text=Dress',
+        description: 'Elegant summer dress for any occasion'
+      }
+    ];
+
+    // Function to render products
+    function renderProducts(products) {
+      const productsGrid = document.getElementById('products-grid');
+      productsGrid.innerHTML = '';
+
+      products.forEach(product => {
+        const productCard = document.createElement('a');
+        productCard.href = '#';
+        productCard.className = 'product-card';
+        productCard.onclick = function(e) {
+          e.preventDefault();
+          window.FashionEcommerce.Navigation.goToPage('product', { id: product.id });
+        };
+
+        productCard.innerHTML = `
+          <img src="${product.image}" alt="${product.name}" class="product-image">
+          <div class="product-info">
+            <h3 class="product-title">${product.name}</h3>
+            <div class="product-price">$${product.price.toFixed(2)}</div>
+            <p class="product-description">${product.description}</p>
+          </div>
+        `;
+
+        productsGrid.appendChild(productCard);
+      });
+    }
+
+    // Initialize products on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      // For now, use mock data
+      renderProducts(mockProducts);
+
+      // In the future, replace with API call:
+      /*
+      fetch('/api/products')
+        .then(response => response.json())
+        .then(data => renderProducts(data))
+        .catch(error => {
+          console.error('Error fetching products:', error);
+          renderProducts(mockProducts); // fallback to mock data
+        });
+      */
+    });
+  </script>
+</body>
+</html>
