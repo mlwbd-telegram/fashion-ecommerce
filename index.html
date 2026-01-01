@@ -1,164 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EKETAR - Premium Sports Jerseys</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EKETAR - Premium Sports Jerseys</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header/Navbar -->
-  <header class="header">
-    <nav class="navbar container">
-      <a href="index.html" class="logo">EKETAR</a>
-      
-      <ul class="nav-links">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="shop.html" class="nav-link">Shop</a></li>
-      </ul>
-      
-      <div class="nav-links">
-        <a href="cart.html" class="cart-icon">
-          <span>🛒</span>
-          <span class="cart-count"></span>
-        </a>
-      </div>
-      
-      <button class="menu-toggle">☰</button>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content text-center">
-        <h1>Elevate Your Style</h1>
-        <p class="hero-subtitle">Discover the latest fashion trends and premium quality clothing</p>
-        <button class="btn btn-primary" id="shop-now-btn">Shop Now</button>
-      </div>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        Free Delivery on Orders Over ৳3000
     </div>
-  </section>
 
-  <!-- Featured Products Section -->
-  <section class="featured-products">
-    <div class="container">
-      <h2 class="text-center">Featured Products</h2>
-      <div class="grid grid-cols-4" id="products-grid">
-        <!-- Products will be loaded here dynamically -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Brand Callout Section -->
-  <section class="brand-callout">
-    <div class="container">
-      <div class="text-center">
-        <h3>Quality & Fashion</h3>
-        <p>We believe in delivering premium quality fashion that makes you feel confident and stylish. Every piece is carefully selected to ensure the best quality and design.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h5>Quick Links</h5>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-          </ul>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="logo">EKETAR</a>
+                <nav class="nav-menu">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="shop.html" class="nav-link">Shop</a>
+                </nav>
+                <a href="cart.html" class="cart-icon">
+                    🛒
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 StyleHub. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+    </header>
 
-  <script src="script.js"></script>
-  <script>
-    // Hero section button functionality
-    document.getElementById('shop-now-btn').addEventListener('click', function() {
-      window.FashionEcommerce.Navigation.goToPage('shop');
-    });
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Premium Sports Jerseys</h1>
+            <p class="hero-subtitle">Football & Cricket Jerseys — Custom Name & Number Available</p>
+            <a href="shop.html" class="cta-button">Shop Now</a>
+        </div>
+    </section>
 
-    // Mock product data (will be replaced by API call later)
-    const mockProducts = [
-      {
-        id: 1,
-        name: 'Premium Cotton T-Shirt',
-        price: 29.99,
-        image: 'https://via.placeholder.com/300x300?text=T-Shirt',
-        description: 'Comfortable cotton t-shirt for everyday wear'
-      },
-      {
-        id: 2,
-        name: 'Designer Jeans',
-        price: 89.99,
-        image: 'https://via.placeholder.com/300x300?text=Jeans',
-        description: 'Stylish denim jeans with perfect fit'
-      },
-      {
-        id: 3,
-        name: 'Casual Jacket',
-        price: 129.99,
-        image: 'https://via.placeholder.com/300x300?text=Jacket',
-        description: 'Lightweight jacket for casual occasions'
-      },
-      {
-        id: 4,
-        name: 'Summer Dress',
-        price: 79.99,
-        image: 'https://via.placeholder.com/300x300?text=Dress',
-        description: 'Elegant summer dress for any occasion'
-      }
-    ];
+    <!-- Category Tabs -->
+    <section class="section">
+        <div class="container">
+            <div class="category-tabs">
+                <div class="category-tab active">New Arrivals</div>
+                <div class="category-tab">Football Jerseys</div>
+                <div class="category-tab">Cricket Jerseys</div>
+            </div>
+        </div>
+    </section>
 
-    // Function to render products
-    function renderProducts(products) {
-      const productsGrid = document.getElementById('products-grid');
-      productsGrid.innerHTML = '';
+    <!-- Featured Jerseys -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-spacer">Featured Jerseys</h2>
+            <div class="product-grid">
+                <a href="product.html?id=1" class="product-card">
+                    <img src="https://placehold.co/300x300" alt="Argentina Home Jersey" class="product-image">
+                    <h3 class="product-title">Argentina Home Jersey</h3>
+                    <p class="product-price">৳2,899</p>
+                </a>
+                
+                <a href="product.html?id=2" class="product-card">
+                    <img src="https://placehold.co/300x300" alt="Brazil Away Jersey" class="product-image">
+                    <h3 class="product-title">Brazil Away Jersey</h3>
+                    <p class="product-price">৳2,799</p>
+                </a>
+                
+                <a href="product.html?id=3" class="product-card">
+                    <img src="https://placehold.co/300x300" alt="Bangladesh Cricket Jersey" class="product-image">
+                    <h3 class="product-title">Bangladesh Cricket Jersey</h3>
+                    <p class="product-price">৳2,299</p>
+                </a>
+                
+                <a href="product.html?id=4" class="product-card">
+                    <img src="https://placehold.co/300x300" alt="England Cricket Jersey" class="product-image">
+                    <h3 class="product-title">England Cricket Jersey</h3>
+                    <p class="product-price">৳2,399</p>
+                </a>
+            </div>
+        </div>
+    </section>
 
-      products.forEach(product => {
-        const productCard = document.createElement('a');
-        productCard.href = '#';
-        productCard.className = 'product-card';
-        productCard.onclick = function(e) {
-          e.preventDefault();
-          window.FashionEcommerce.Navigation.goToPage('product', { id: product.id });
-        };
+    <!-- Content Block -->
+    <section class="section">
+        <div class="container">
+            <div class="content-block">
+                <p>We design and deliver high-quality sports jerseys crafted for comfort, durability, and performance.</p>
+            </div>
+        </div>
+    </section>
 
-        productCard.innerHTML = `
-          <img src="${product.image}" alt="${product.name}" class="product-image">
-          <div class="product-info">
-            <h3 class="product-title">${product.name}</h3>
-            <div class="product-price">$${product.price.toFixed(2)}</div>
-            <p class="product-description">${product.description}</p>
-          </div>
-        `;
-
-        productsGrid.appendChild(productCard);
-      });
-    }
-
-    // Initialize products on page load
-    document.addEventListener('DOMContentLoaded', function() {
-      // For now, use mock data
-      renderProducts(mockProducts);
-
-      // In the future, replace with API call:
-      /*
-      fetch('/api/products')
-        .then(response => response.json())
-        .then(data => renderProducts(data))
-        .catch(error => {
-          console.error('Error fetching products:', error);
-          renderProducts(mockProducts); // fallback to mock data
-        });
-      */
-    });
-  </script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>EKETAR</h3>
+                    <p>Premium sports jerseys for football and cricket enthusiasts.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Shop</h3>
+                    <ul class="footer-links">
+                        <li><a href="shop.html">All Jerseys</a></li>
+                        <li><a href="shop.html">Football Jerseys</a></li>
+                        <li><a href="shop.html">Cricket Jerseys</a></li>
+                        <li><a href="shop.html">Custom Jerseys</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" class="newsletter-input">
+                        <button type="submit" class="newsletter-button">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                © 2026 EKETAR. All rights reserved.
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
