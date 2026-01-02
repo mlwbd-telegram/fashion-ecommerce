@@ -9,77 +9,110 @@
 <body>
     <!-- Announcement Bar -->
     <div class="announcement-bar">
-        Free Delivery on Orders Over ৳3000
+        <div class="container">
+            <p class="announcement-bar__text">Free Delivery on Orders Over ৳3000</p>
+        </div>
     </div>
 
-    <!-- Header -->
+    <!-- Header / Navbar -->
     <header class="header">
         <div class="container">
-            <div class="nav-container">
-                <a href="index.html" class="logo">EKETAR</a>
-                <nav class="nav-menu">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="shop.html" class="nav-link">Shop</a>
-                </nav>
-                <a href="cart.html" class="cart-icon">
-                    🛒
-                    <span class="cart-count">0</span>
-                </a>
-            </div>
+            <nav class="navbar">
+                <a href="index.html" class="navbar__logo">EKETAR</a>
+                <div class="navbar__nav">
+                    <a href="index.html" class="navbar__link">Home</a>
+                    <a href="shop.html" class="navbar__link">Shop</a>
+                </div>
+                <div class="navbar__cart">
+                    <a href="cart.html" class="navbar__cart-link">
+                        🛒
+                        <span class="navbar__cart-count">0</span>
+                    </a>
+                </div>
+                <div class="navbar__toggle">
+                    <div class="navbar__toggle-line"></div>
+                    <div class="navbar__toggle-line"></div>
+                    <div class="navbar__toggle-line"></div>
+                </div>
+            </nav>
         </div>
     </header>
 
     <!-- Product Details Section -->
-    <section class="section">
+    <section class="product-page">
         <div class="container">
-            <div class="product-details">
-                <div class="product-images">
-                    <img src="https://placehold.co/600x600" alt="Argentina Home Jersey" class="product-image">
+            <div class="product-detail">
+                <!-- Product Image -->
+                <div class="product-detail__image-container">
+                    <!-- Demo image | Replace later | Recommended size: 800x800 -->
+                    <img src="https://via.placeholder.com/800x800/ffffff/333333?text=Argentina+Jersey" alt="Argentina Home Jersey" class="product-detail__image">
                 </div>
-                
-                <div class="product-info">
-                    <h1 class="product-title">Argentina Home Jersey</h1>
-                    <p class="product-price">৳2,899</p>
-                    <p class="product-description">Official Argentina national team home jersey for the 2026 season. Features premium fabric technology for maximum comfort and breathability.</p>
-                    
-                    <div class="size-selection">
-                        <h3>Select Size</h3>
-                        <div class="size-options">
+
+                <!-- Product Info -->
+                <div class="product-detail__info">
+                    <h1 class="product-detail__title">Argentina Home Jersey</h1>
+                    <p class="product-detail__price">৳2,899</p>
+                    <p class="product-detail__description">
+                        Authentic Argentina home jersey with premium quality fabric and official design. Perfect fit for football enthusiasts.
+                    </p>
+                    <p class="product-detail__description">
+                        Features official team logo, embroidered badges, and comfortable polyester material for maximum comfort.
+                    </p>
+
+                    <!-- Size Selection -->
+                    <div class="size-selector">
+                        <h3 class="size-selector__title">Select Size</h3>
+                        <div class="size-selector__options">
                             <button type="button" class="size-btn">S</button>
                             <button type="button" class="size-btn">M</button>
-                            <button type="button" class="size-btn active">L</button>
+                            <button type="button" class="size-btn">L</button>
                             <button type="button" class="size-btn">XL</button>
                             <button type="button" class="size-btn">XXL</button>
                         </div>
                     </div>
-                    
+
+                    <!-- Customization Section -->
                     <div class="customization-section">
-                        <h3>Customize Your Jersey</h3>
-                        <div class="customization-inputs">
-                            <input type="text" placeholder="Name" class="custom-input">
-                            <input type="number" placeholder="Number" class="custom-input">
+                        <h3 class="customization-section__title">Customize Your Jersey</h3>
+                        <div class="customization-form">
+                            <div class="form-group">
+                                <label class="form-group__label">Name</label>
+                                <input type="text" class="form-group__input" placeholder="Enter player name">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-group__label">Number</label>
+                                <input type="number" class="form-group__input" placeholder="Enter jersey number" min="1" max="99">
+                            </div>
                         </div>
-                        <p class="custom-note">Customization available for select jerseys</p>
+                        <p class="customization-note">
+                            <small>Custom name and number will be printed as shown on the jersey</small>
+                        </p>
                     </div>
-                    
+
+                    <!-- Quantity Selection -->
                     <div class="quantity-section">
-                        <h3>Quantity</h3>
-                        <input type="number" value="1" min="1" class="quantity-input">
+                        <label class="quantity-section__label">Quantity</label>
+                        <input type="number" class="quantity-input" value="1" min="1">
                     </div>
-                    
+
+                    <!-- Add to Cart Button -->
                     <button class="cta-button">Add to Cart</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Product Description -->
-    <section class="section">
+    <!-- Product Description Section -->
+    <section class="section section--small">
         <div class="container">
-            <div class="content-block">
-                <h2>Product Description</h2>
-                <p>This premium Argentina home jersey is crafted from high-performance fabric that offers superior comfort and durability. The moisture-wicking technology keeps you dry during intense activities, while the authentic design features the iconic blue and white stripes. Perfect for fans and players alike, this jersey combines style with functionality.</p>
-                <p>Made from 100% recycled polyester, this jersey represents Argentina's commitment to both performance and sustainability. The lightweight material ensures maximum mobility, while the reinforced seams provide long-lasting durability.</p>
+            <div class="product-description">
+                <h2 class="product-description__title">Product Details</h2>
+                <p class="product-description__text">
+                    The Argentina Home Jersey features the classic sky blue and white stripes with the official AFA badge. Made from high-quality polyester fabric with moisture-wicking technology, this jersey provides comfort and style for any football fan. The authentic design includes official sponsor logos and team crests, making it perfect for match days or casual wear.
+                </p>
+                <p class="product-description__text">
+                    Available in multiple sizes from S to XXL, this jersey comes with premium stitching and durable construction. The lightweight material ensures breathability while maintaining the authentic look of the national team jersey. Perfect for collectors, players, or fans who want to show their support for the Argentine national team.
+                </p>
             </div>
         </div>
     </section>
@@ -87,25 +120,25 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-container">
-                <div class="footer-column">
+            <div class="footer__content">
+                <div class="footer__section">
                     <h3>EKETAR</h3>
-                    <p>Premium sports jerseys for football and cricket enthusiasts.</p>
+                    <p>Premium Sports Jerseys with Custom Name & Number</p>
                 </div>
                 
-                <div class="footer-column">
+                <div class="footer__section">
                     <h3>Shop</h3>
-                    <ul class="footer-links">
+                    <ul class="footer__nav">
                         <li><a href="shop.html">All Jerseys</a></li>
                         <li><a href="shop.html">Football Jerseys</a></li>
                         <li><a href="shop.html">Cricket Jerseys</a></li>
-                        <li><a href="shop.html">Custom Jerseys</a></li>
+                        <li><a href="shop.html">New Arrivals</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-column">
+                <div class="footer__section">
                     <h3>Support</h3>
-                    <ul class="footer-links">
+                    <ul class="footer__nav">
                         <li><a href="#">Contact Us</a></li>
                         <li><a href="#">Shipping Policy</a></li>
                         <li><a href="#">Returns & Exchanges</a></li>
@@ -113,22 +146,18 @@
                     </ul>
                 </div>
                 
-                <div class="footer-column">
+                <div class="footer__section">
                     <h3>Newsletter</h3>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Your email" class="newsletter-input">
-                        <button type="submit" class="newsletter-button">Subscribe</button>
-                    </form>
+                    <p>Subscribe for updates and offers</p>
+                    <input type="email" placeholder="Enter your email" class="footer__email-input">
+                    <button class="footer__subscribe-btn">Subscribe</button>
                 </div>
             </div>
             
-            <div class="copyright">
-                © 2026 EKETAR. All rights reserved.
+            <div class="footer__copyright">
+                <p>© 2026 EKETAR. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
-    <script src="product.js"></script>
 </body>
 </html>
