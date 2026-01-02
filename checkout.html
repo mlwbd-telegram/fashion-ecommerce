@@ -9,109 +9,131 @@
 <body>
     <!-- Announcement Bar -->
     <div class="announcement-bar">
-        Free Delivery on Orders Over ৳3000
+        <div class="container">
+            <p class="announcement-bar__text">Free Delivery on Orders Over ৳3000</p>
+        </div>
     </div>
 
-    <!-- Header -->
+    <!-- Header / Navbar -->
     <header class="header">
         <div class="container">
-            <div class="nav-container">
-                <a href="index.html" class="logo">EKETAR</a>
-                <nav class="nav-menu">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="shop.html" class="nav-link">Shop</a>
-                </nav>
-                <a href="cart.html" class="cart-icon">
-                    🛒
-                    <span class="cart-count">2</span>
-                </a>
-            </div>
+            <nav class="navbar">
+                <a href="index.html" class="navbar__logo">EKETAR</a>
+                <div class="navbar__nav">
+                    <a href="index.html" class="navbar__link">Home</a>
+                    <a href="shop.html" class="navbar__link">Shop</a>
+                </div>
+                <div class="navbar__cart">
+                    <a href="cart.html" class="navbar__cart-link">
+                        🛒
+                        <span class="navbar__cart-count">2</span>
+                    </a>
+                </div>
+                <div class="navbar__toggle">
+                    <div class="navbar__toggle-line"></div>
+                    <div class="navbar__toggle-line"></div>
+                    <div class="navbar__toggle-line"></div>
+                </div>
+            </nav>
         </div>
     </header>
 
     <!-- Page Title Section -->
-    <section class="section">
+    <section class="section section--small">
         <div class="container">
-            <h1 class="hero-title">Checkout</h1>
-            <p class="hero-subtitle">Complete your order</p>
+            <div class="page-title">
+                <h1 class="page-title__heading">Checkout</h1>
+                <p class="page-title__subtitle">Complete your order</p>
+            </div>
         </div>
     </section>
 
-    <!-- Checkout Form -->
+    <!-- Checkout Container -->
     <section class="section">
         <div class="container">
             <div class="checkout-container">
                 <div class="checkout-form">
-                    <h2>Customer Information</h2>
-                    
-                    <div class="form-group">
-                        <label for="name">Full Name *</label>
-                        <input type="text" id="name" required>
+                    <!-- Customer Information Form -->
+                    <div class="checkout-section">
+                        <h2 class="checkout-section__title">Customer Information</h2>
+                        <div class="form-group">
+                            <label class="form-group__label">Full Name *</label>
+                            <input type="text" class="form-group__input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-group__label">Phone Number *</label>
+                            <input type="tel" class="form-group__input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-group__label">Email Address *</label>
+                            <input type="email" class="form-group__input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-group__label">Delivery Address *</label>
+                            <textarea class="form-group__input" rows="4" required></textarea>
+                        </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Phone Number *</label>
-                        <input type="tel" id="phone" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="address">Delivery Address *</label>
-                        <textarea id="address" rows="4" required></textarea>
-                    </div>
-                    
-                    <div class="payment-method">
-                        <h3>Payment Method</h3>
-                        <div class="payment-option">
-                            <input type="radio" id="cod" name="payment" checked>
-                            <label for="cod">Cash on Delivery</label>
+
+                    <!-- Payment Method Section -->
+                    <div class="checkout-section">
+                        <h2 class="checkout-section__title">Payment Method</h2>
+                        <div class="payment-method">
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="cod" checked>
+                                Cash on Delivery
+                            </label>
                         </div>
                     </div>
                 </div>
-                
+
+                <!-- Order Summary -->
                 <div class="order-summary">
-                    <h2>Order Summary</h2>
-                    
+                    <h2 class="checkout-section__title">Order Summary</h2>
                     <div class="order-items">
+                        <!-- Order Item 1 -->
                         <div class="order-item">
-                            <span class="item-name">Argentina Home Jersey</span>
-                            <span class="item-size">Size: L</span>
-                            <span class="item-quantity">Qty: 1</span>
-                            <span class="item-price">৳2,899</span>
+                            <div class="order-item__info">
+                                <h3 class="order-item__name">Argentina Home Jersey</h3>
+                                <p class="order-item__size">Size: M</p>
+                                <p class="order-item__quantity">Qty: 1</p>
+                            </div>
+                            <p class="order-item__price">৳2,899</p>
                         </div>
-                        
+
+                        <!-- Order Item 2 -->
                         <div class="order-item">
-                            <span class="item-name">Brazil Away Jersey</span>
-                            <span class="item-size">Size: M</span>
-                            <span class="item-quantity">Qty: 1</span>
-                            <span class="item-price">৳2,799</span>
+                            <div class="order-item__info">
+                                <h3 class="order-item__name">Brazil Away Jersey</h3>
+                                <p class="order-item__size">Size: L</p>
+                                <p class="order-item__quantity">Qty: 1</p>
+                            </div>
+                            <p class="order-item__price">৳2,799</p>
                         </div>
                     </div>
-                    
+
                     <div class="order-totals">
-                        <div class="order-total-row">
+                        <div class="order-total__row">
                             <span>Subtotal</span>
                             <span>৳5,698</span>
                         </div>
-                        <div class="order-total-row">
+                        <div class="order-total__row">
                             <span>Shipping</span>
                             <span>Free (on orders over ৳3000)</span>
                         </div>
-                        <div class="order-total-divider"></div>
-                        <div class="order-total-row total">
+                        <hr class="order-totals__divider">
+                        <div class="order-total__row order-total__row--total">
                             <span>Total</span>
                             <span>৳5,698</span>
                         </div>
                     </div>
-                    
-                    <a href="success.html" class="cta-button">Place Order</a>
-                    
-                    <p class="checkout-note">Order confirmation will be sent via WhatsApp and email.</p>
+
+                    <button class="cta-button">Place Order</button>
                 </div>
+            </div>
+
+            <!-- Checkout Note -->
+            <div class="checkout-note">
+                <p>Order confirmation will be sent via WhatsApp and email.</p>
             </div>
         </div>
     </section>
@@ -119,25 +141,25 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-container">
-                <div class="footer-column">
+            <div class="footer__content">
+                <div class="footer__section">
                     <h3>EKETAR</h3>
-                    <p>Premium sports jerseys for football and cricket enthusiasts.</p>
+                    <p>Premium Sports Jerseys with Custom Name & Number</p>
                 </div>
                 
-                <div class="footer-column">
+                <div class="footer__section">
                     <h3>Shop</h3>
-                    <ul class="footer-links">
+                    <ul class="footer__nav">
                         <li><a href="shop.html">All Jerseys</a></li>
                         <li><a href="shop.html">Football Jerseys</a></li>
                         <li><a href="shop.html">Cricket Jerseys</a></li>
-                        <li><a href="shop.html">Custom Jerseys</a></li>
+                        <li><a href="shop.html">New Arrivals</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-column">
+                <div class="footer__section">
                     <h3>Support</h3>
-                    <ul class="footer-links">
+                    <ul class="footer__nav">
                         <li><a href="#">Contact Us</a></li>
                         <li><a href="#">Shipping Policy</a></li>
                         <li><a href="#">Returns & Exchanges</a></li>
@@ -145,17 +167,16 @@
                     </ul>
                 </div>
                 
-                <div class="footer-column">
+                <div class="footer__section">
                     <h3>Newsletter</h3>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Your email" class="newsletter-input">
-                        <button type="submit" class="newsletter-button">Subscribe</button>
-                    </form>
+                    <p>Subscribe for updates and offers</p>
+                    <input type="email" placeholder="Enter your email" class="footer__email-input">
+                    <button class="footer__subscribe-btn">Subscribe</button>
                 </div>
             </div>
             
-            <div class="copyright">
-                © 2026 EKETAR. All rights reserved.
+            <div class="footer__copyright">
+                <p>© 2026 EKETAR. All rights reserved.</p>
             </div>
         </div>
     </footer>
