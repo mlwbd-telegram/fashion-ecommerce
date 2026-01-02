@@ -9,31 +9,42 @@
 <body>
     <!-- Announcement Bar -->
     <div class="announcement-bar">
-        Free Delivery on Orders Over ৳3000
+        <div class="container">
+            <p class="announcement-bar__text">Free Delivery on Orders Over ৳3000</p>
+        </div>
     </div>
 
-    <!-- Header -->
+    <!-- Header / Navbar -->
     <header class="header">
         <div class="container">
-            <div class="nav-container">
-                <a href="index.html" class="logo">EKETAR</a>
-                <nav class="nav-menu">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="shop.html" class="nav-link">Shop</a>
-                </nav>
-                <a href="cart.html" class="cart-icon">
-                    🛒
-                    <span class="cart-count">2</span>
-                </a>
-            </div>
+            <nav class="navbar">
+                <a href="index.html" class="navbar__logo">EKETAR</a>
+                <div class="navbar__nav">
+                    <a href="index.html" class="navbar__link">Home</a>
+                    <a href="shop.html" class="navbar__link">Shop</a>
+                </div>
+                <div class="navbar__cart">
+                    <a href="cart.html" class="navbar__cart-link">
+                        🛒
+                        <span class="navbar__cart-count">2</span>
+                    </a>
+                </div>
+                <div class="navbar__toggle">
+                    <div class="navbar__toggle-line"></div>
+                    <div class="navbar__toggle-line"></div>
+                    <div class="navbar__toggle-line"></div>
+                </div>
+            </nav>
         </div>
     </header>
 
     <!-- Page Title Section -->
-    <section class="section">
+    <section class="section section--small">
         <div class="container">
-            <h1 class="hero-title">Your Cart</h1>
-            <p class="hero-subtitle">Review your selected jerseys</p>
+            <div class="page-title">
+                <h1 class="page-title__heading">Your Cart</h1>
+                <p class="page-title__subtitle">Review your selected jerseys</p>
+            </div>
         </div>
     </section>
 
@@ -41,56 +52,65 @@
     <section class="section">
         <div class="container">
             <div class="cart-items">
+                <!-- Cart Item 1 -->
                 <div class="cart-item">
-                    <img src="https://placehold.co/100x100" alt="Argentina Home Jersey" class="cart-item-image">
-                    <div class="cart-item-details">
-                        <h3 class="cart-item-name">Argentina Home Jersey</h3>
-                        <p class="cart-item-size">Size: L</p>
-                        <input type="number" value="1" min="1" class="cart-item-quantity">
+                    <!-- Demo image | Replace later | Recommended size: 150x150 -->
+                    <img src="https://via.placeholder.com/150x150/ffffff/333333?text=Argentina+Jersey" alt="Argentina Home Jersey" class="cart-item__image">
+                    <div class="cart-item__info">
+                        <h3 class="cart-item__name">Argentina Home Jersey</h3>
+                        <p class="cart-item__size">Size: M</p>
+                        <div class="cart-item__quantity">
+                            <label class="cart-item__quantity-label">Quantity:</label>
+                            <input type="number" class="cart-item__quantity-input" value="1" min="1">
+                        </div>
                     </div>
-                    <div class="cart-item-price">৳2,899</div>
-                    <button class="cart-item-remove">✕</button>
+                    <div class="cart-item__actions">
+                        <p class="cart-item__price">৳2,899</p>
+                        <button class="cart-item__remove-btn">✕</button>
+                    </div>
                 </div>
-                
+
+                <!-- Cart Item 2 -->
                 <div class="cart-item">
-                    <img src="https://placehold.co/100x100" alt="Brazil Away Jersey" class="cart-item-image">
-                    <div class="cart-item-details">
-                        <h3 class="cart-item-name">Brazil Away Jersey</h3>
-                        <p class="cart-item-size">Size: M</p>
-                        <input type="number" value="1" min="1" class="cart-item-quantity">
+                    <!-- Demo image | Replace later | Recommended size: 150x150 -->
+                    <img src="https://via.placeholder.com/150x150/ffffff/333333?text=Brazil+Jersey" alt="Brazil Away Jersey" class="cart-item__image">
+                    <div class="cart-item__info">
+                        <h3 class="cart-item__name">Brazil Away Jersey</h3>
+                        <p class="cart-item__size">Size: L</p>
+                        <div class="cart-item__quantity">
+                            <label class="cart-item__quantity-label">Quantity:</label>
+                            <input type="number" class="cart-item__quantity-input" value="1" min="1">
+                        </div>
                     </div>
-                    <div class="cart-item-price">৳2,799</div>
-                    <button class="cart-item-remove">✕</button>
+                    <div class="cart-item__actions">
+                        <p class="cart-item__price">৳2,799</p>
+                        <button class="cart-item__remove-btn">✕</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Cart Summary -->
-    <section class="section">
-        <div class="container">
+            <!-- Cart Summary Section -->
             <div class="cart-summary">
-                <div class="cart-totals">
-                    <div class="cart-total-row">
-                        <span>Subtotal</span>
-                        <span>৳5,698</span>
-                    </div>
-                    <div class="cart-total-row">
-                        <span>Shipping</span>
-                        <span>Free (on orders over ৳3000)</span>
-                    </div>
-                    <div class="cart-total-divider"></div>
-                    <div class="cart-total-row total">
-                        <span>Total</span>
-                        <span>৳5,698</span>
-                    </div>
+                <h2 class="cart-summary__title">Order Summary</h2>
+                <div class="cart-summary__row">
+                    <span>Subtotal</span>
+                    <span>৳5,698</span>
                 </div>
-                
+                <div class="cart-summary__row">
+                    <span>Shipping</span>
+                    <span>Free (on orders over ৳3000)</span>
+                </div>
+                <hr class="cart-summary__divider">
+                <div class="cart-summary__total">
+                    <span>Total</span>
+                    <span>৳5,698</span>
+                </div>
                 <a href="checkout.html" class="cta-button">Proceed to Checkout</a>
-                
-                <div class="continue-shopping">
-                    <a href="shop.html">← Continue Shopping</a>
-                </div>
+            </div>
+
+            <!-- Continue Shopping Link -->
+            <div class="continue-shopping">
+                <a href="shop.html" class="continue-shopping__link">← Continue Shopping</a>
             </div>
         </div>
     </section>
@@ -98,25 +118,25 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-container">
-                <div class="footer-column">
+            <div class="footer__content">
+                <div class="footer__section">
                     <h3>EKETAR</h3>
-                    <p>Premium sports jerseys for football and cricket enthusiasts.</p>
+                    <p>Premium Sports Jerseys with Custom Name & Number</p>
                 </div>
                 
-                <div class="footer-column">
+                <div class="footer__section">
                     <h3>Shop</h3>
-                    <ul class="footer-links">
+                    <ul class="footer__nav">
                         <li><a href="shop.html">All Jerseys</a></li>
                         <li><a href="shop.html">Football Jerseys</a></li>
                         <li><a href="shop.html">Cricket Jerseys</a></li>
-                        <li><a href="shop.html">Custom Jerseys</a></li>
+                        <li><a href="shop.html">New Arrivals</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-column">
+                <div class="footer__section">
                     <h3>Support</h3>
-                    <ul class="footer-links">
+                    <ul class="footer__nav">
                         <li><a href="#">Contact Us</a></li>
                         <li><a href="#">Shipping Policy</a></li>
                         <li><a href="#">Returns & Exchanges</a></li>
@@ -124,17 +144,16 @@
                     </ul>
                 </div>
                 
-                <div class="footer-column">
+                <div class="footer__section">
                     <h3>Newsletter</h3>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Your email" class="newsletter-input">
-                        <button type="submit" class="newsletter-button">Subscribe</button>
-                    </form>
+                    <p>Subscribe for updates and offers</p>
+                    <input type="email" placeholder="Enter your email" class="footer__email-input">
+                    <button class="footer__subscribe-btn">Subscribe</button>
                 </div>
             </div>
             
-            <div class="copyright">
-                © 2026 EKETAR. All rights reserved.
+            <div class="footer__copyright">
+                <p>© 2026 EKETAR. All rights reserved.</p>
             </div>
         </div>
     </footer>
