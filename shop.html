@@ -1,219 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Jerseys - EKETAR</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Jerseys - EKETAR</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Announcement Bar -->
-    <div class="announcement-bar">
-        <div class="container">
-            <p class="announcement-bar__text">Free Delivery on Orders Over ৳3000</p>
-        </div>
+
+<!-- Announcement -->
+<div class="announcement-bar">
+  Free Delivery on Orders Over ৳3000
+</div>
+
+<!-- Header -->
+<header class="header">
+  <div class="container">
+    <div class="nav-container">
+      <a href="index.html" class="logo">EKETAR</a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+      </nav>
+
+      <a href="cart.html" class="cart-icon">
+        🛒 <span class="cart-count">0</span>
+      </a>
     </div>
+  </div>
+</header>
 
-    <!-- Header / Navbar -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="index.html" class="navbar__logo">EKETAR</a>
-                <div class="navbar__nav">
-                    <a href="index.html" class="navbar__link">Home</a>
-                    <a href="shop.html" class="navbar__link">Shop</a>
-                </div>
-                <div class="navbar__cart">
-                    <a href="cart.html" class="navbar__cart-link">
-                        🛒
-                        <span class="navbar__cart-count">0</span>
-                    </a>
-                </div>
-                <div class="navbar__toggle">
-                    <div class="navbar__toggle-line"></div>
-                    <div class="navbar__toggle-line"></div>
-                    <div class="navbar__toggle-line"></div>
-                </div>
-            </nav>
-        </div>
-    </header>
+<!-- Page Title -->
+<section class="section">
+  <div class="container text-center">
+    <h1 class="hero-title">Shop Jerseys</h1>
+    <p class="hero-subtitle">Football • Cricket • Custom Jerseys</p>
+  </div>
+</section>
 
-    <!-- Page Title Section -->
-    <section class="section section--small">
-        <div class="container">
-            <div class="page-title">
-                <h1 class="page-title__heading">Shop Jerseys</h1>
-                <p class="page-title__subtitle">Football, Cricket & Custom Jerseys</p>
-            </div>
-        </div>
-    </section>
+<!-- Category Tabs -->
+<section class="section">
+  <div class="container">
+    <div class="category-tabs">
+      <div class="category-tab active">All</div>
+      <div class="category-tab">Football</div>
+      <div class="category-tab">Cricket</div>
+      <div class="category-tab">Custom</div>
+    </div>
+  </div>
+</section>
 
-    <!-- Category Tabs -->
-    <section class="section section--small">
-        <div class="container">
-            <div class="category-tabs">
-                <div class="category-tabs__container">
-                    <button class="category-tab category-tab--active">All</button>
-                    <button class="category-tab">Football Jerseys</button>
-                    <button class="category-tab">Cricket Jerseys</button>
-                    <button class="category-tab">Custom Jerseys</button>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Products -->
+<section class="section">
+  <div class="container">
+    <div class="product-grid">
 
-    <!-- Product Grid -->
-    <section class="section">
-        <div class="container">
-            <div class="shop-grid">
-                <!-- Product 1 -->
-                <div class="product-card">
-                    <a href="product.html?id=1" class="product-card__link">
-                        <!-- Demo image | Replace later | Recommended size: 600x600 -->
-                        <img src="https://via.placeholder.com/600x600/ffffff/333333?text=Argentina+Jersey" alt="Argentina Home Jersey" class="product-card__image">
-                    </a>
-                    <div class="product-card__content">
-                        <h3 class="product-card__name">Argentina Home Jersey</h3>
-                        <p class="product-card__price">৳2,899</p>
-                        <a href="product.html?id=1" class="product-card__link">View Details</a>
-                    </div>
-                </div>
+      <a href="product.html?id=1" class="product-card">
+        <img src="https://placehold.co/300x300" class="product-image">
+        <h3 class="product-title">Argentina Home Jersey</h3>
+        <p class="product-price">৳2,899</p>
+      </a>
 
-                <!-- Product 2 -->
-                <div class="product-card">
-                    <a href="product.html?id=2" class="product-card__link">
-                        <!-- Demo image | Replace later | Recommended size: 600x600 -->
-                        <img src="https://via.placeholder.com/600x600/ffffff/333333?text=Brazil+Jersey" alt="Brazil Away Jersey" class="product-card__image">
-                    </a>
-                    <div class="product-card__content">
-                        <h3 class="product-card__name">Brazil Away Jersey</h3>
-                        <p class="product-card__price">৳2,799</p>
-                        <a href="product.html?id=2" class="product-card__link">View Details</a>
-                    </div>
-                </div>
+      <a href="product.html?id=2" class="product-card">
+        <img src="https://placehold.co/300x300" class="product-image">
+        <h3 class="product-title">Brazil Away Jersey</h3>
+        <p class="product-price">৳2,799</p>
+      </a>
 
-                <!-- Product 3 -->
-                <div class="product-card">
-                    <a href="product.html?id=3" class="product-card__link">
-                        <!-- Demo image | Replace later | Recommended size: 600x600 -->
-                        <img src="https://via.placeholder.com/600x600/ffffff/333333?text=Bangladesh+Jersey" alt="Bangladesh Cricket Jersey" class="product-card__image">
-                    </a>
-                    <div class="product-card__content">
-                        <h3 class="product-card__name">Bangladesh Cricket Jersey</h3>
-                        <p class="product-card__price">৳2,299</p>
-                        <a href="product.html?id=3" class="product-card__link">View Details</a>
-                    </div>
-                </div>
+      <a href="product.html?id=3" class="product-card">
+        <img src="https://placehold.co/300x300" class="product-image">
+        <h3 class="product-title">Bangladesh Cricket Jersey</h3>
+        <p class="product-price">৳2,299</p>
+      </a>
 
-                <!-- Product 4 -->
-                <div class="product-card">
-                    <a href="product.html?id=4" class="product-card__link">
-                        <!-- Demo image | Replace later | Recommended size: 600x600 -->
-                        <img src="https://via.placeholder.com/600x600/ffffff/333333?text=India+Jersey" alt="India Cricket Jersey" class="product-card__image">
-                    </a>
-                    <div class="product-card__content">
-                        <h3 class="product-card__name">India Cricket Jersey</h3>
-                        <p class="product-card__price">৳2,399</p>
-                        <a href="product.html?id=4" class="product-card__link">View Details</a>
-                    </div>
-                </div>
+      <a href="product.html?id=4" class="product-card">
+        <img src="https://placehold.co/300x300" class="product-image">
+        <h3 class="product-title">Custom Jersey</h3>
+        <p class="product-price">৳3,299</p>
+      </a>
 
-                <!-- Product 5 -->
-                <div class="product-card">
-                    <a href="product.html?id=5" class="product-card__link">
-                        <!-- Demo image | Replace later | Recommended size: 600x600 -->
-                        <img src="https://via.placeholder.com/600x600/ffffff/333333?text=ManU+Jersey" alt="Manchester United Jersey" class="product-card__image">
-                    </a>
-                    <div class="product-card__content">
-                        <h3 class="product-card__name">Manchester United Jersey</h3>
-                        <p class="product-card__price">৳2,499</p>
-                        <a href="product.html?id=5" class="product-card__link">View Details</a>
-                    </div>
-                </div>
+    </div>
+  </div>
+</section>
 
-                <!-- Product 6 -->
-                <div class="product-card">
-                    <a href="product.html?id=6" class="product-card__link">
-                        <!-- Demo image | Replace later | Recommended size: 600x600 -->
-                        <img src="https://via.placeholder.com/600x600/ffffff/333333?text=Real+Madrid+Jersey" alt="Real Madrid Jersey" class="product-card__image">
-                    </a>
-                    <div class="product-card__content">
-                        <h3 class="product-card__name">Real Madrid Jersey</h3>
-                        <p class="product-card__price">৳2,599</p>
-                        <a href="product.html?id=6" class="product-card__link">View Details</a>
-                    </div>
-                </div>
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="copyright">
+      © 2026 EKETAR. All rights reserved.
+    </div>
+  </div>
+</footer>
 
-                <!-- Product 7 -->
-                <div class="product-card">
-                    <a href="product.html?id=7" class="product-card__link">
-                        <!-- Demo image | Replace later | Recommended size: 600x600 -->
-                        <img src="https://via.placeholder.com/600x600/ffffff/333333?text=Custom+Football+Jersey" alt="Custom Football Jersey" class="product-card__image">
-                    </a>
-                    <div class="product-card__content">
-                        <h3 class="product-card__name">Custom Football Jersey</h3>
-                        <p class="product-card__price">৳3,299</p>
-                        <a href="product.html?id=7" class="product-card__link">View Details</a>
-                    </div>
-                </div>
-
-                <!-- Product 8 -->
-                <div class="product-card">
-                    <a href="product.html?id=8" class="product-card__link">
-                        <!-- Demo image | Replace later | Recommended size: 600x600 -->
-                        <img src="https://via.placeholder.com/600x600/ffffff/333333?text=Custom+Cricket+Jersey" alt="Custom Cricket Jersey" class="product-card__image">
-                    </a>
-                    <div class="product-card__content">
-                        <h3 class="product-card__name">Custom Cricket Jersey</h3>
-                        <p class="product-card__price">৳3,199</p>
-                        <a href="product.html?id=8" class="product-card__link">View Details</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__content">
-                <div class="footer__section">
-                    <h3>EKETAR</h3>
-                    <p>Premium Sports Jerseys with Custom Name & Number</p>
-                </div>
-                
-                <div class="footer__section">
-                    <h3>Shop</h3>
-                    <ul class="footer__nav">
-                        <li><a href="shop.html">All Jerseys</a></li>
-                        <li><a href="shop.html">Football Jerseys</a></li>
-                        <li><a href="shop.html">Cricket Jerseys</a></li>
-                        <li><a href="shop.html">New Arrivals</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer__section">
-                    <h3>Support</h3>
-                    <ul class="footer__nav">
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Shipping Policy</a></li>
-                        <li><a href="#">Returns & Exchanges</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer__section">
-                    <h3>Newsletter</h3>
-                    <p>Subscribe for updates and offers</p>
-                    <input type="email" placeholder="Enter your email" class="footer__email-input">
-                    <button class="footer__subscribe-btn">Subscribe</button>
-                </div>
-            </div>
-            
-            <div class="footer__copyright">
-                <p>© 2026 EKETAR. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+<script src="script.js"></script>
 </body>
 </html>
