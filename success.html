@@ -9,74 +9,71 @@
 <body>
     <!-- Announcement Bar -->
     <div class="announcement-bar">
-        Free Delivery on Orders Over ৳3000
+        <div class="container">
+            <p class="announcement-bar__text">Free Delivery on Orders Over ৳3000</p>
+        </div>
     </div>
 
-    <!-- Header -->
+    <!-- Header / Navbar -->
     <header class="header">
         <div class="container">
-            <div class="nav-container">
-                <a href="index.html" class="logo">EKETAR</a>
-                <nav class="nav-menu">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="shop.html" class="nav-link">Shop</a>
-                </nav>
-                <a href="cart.html" class="cart-icon">
-                    🛒
-                    <span class="cart-count">0</span>
-                </a>
-            </div>
+            <nav class="navbar">
+                <a href="index.html" class="navbar__logo">EKETAR</a>
+                <div class="navbar__nav">
+                    <a href="index.html" class="navbar__link">Home</a>
+                    <a href="shop.html" class="navbar__link">Shop</a>
+                </div>
+                <div class="navbar__cart">
+                    <a href="cart.html" class="navbar__cart-link">
+                        🛒
+                        <span class="navbar__cart-count">0</span>
+                    </a>
+                </div>
+                <div class="navbar__toggle">
+                    <div class="navbar__toggle-line"></div>
+                    <div class="navbar__toggle-line"></div>
+                    <div class="navbar__toggle-line"></div>
+                </div>
+            </nav>
         </div>
     </header>
 
     <!-- Success Message Section -->
     <section class="section">
         <div class="container">
-            <div class="success-content">
-                <div class="success-icon">✓</div>
-                <h1 class="hero-title">Order Placed Successfully!</h1>
-                <p class="hero-subtitle">Thank you for shopping with EKETAR.<br>Your order has been received.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Order Details -->
-    <section class="section">
-        <div class="container">
-            <div class="order-details">
-                <div class="order-detail-item">
-                    <strong>Order Number:</strong>
-                    <span>#EKT123456</span>
+            <div class="success-container">
+                <div class="success-message">
+                    <div class="success-icon">✓</div>
+                    <h1 class="success-title">Order Placed Successfully!</h1>
+                    <p class="success-subtitle">Thank you for shopping with EKETAR.</p>
                 </div>
-                
-                <div class="order-detail-item">
-                    <strong>Payment Method:</strong>
-                    <span>Cash on Delivery</span>
-                </div>
-                
-                <div class="order-detail-item">
-                    <strong>Estimated Delivery:</strong>
-                    <span>3–5 business days</span>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Next Actions -->
-    <section class="section">
-        <div class="container">
-            <div class="success-actions">
-                <a href="shop.html" class="cta-button">Continue Shopping</a>
-                <a href="index.html" class="back-to-home">Back to Home</a>
-            </div>
-        </div>
-    </section>
+                <!-- Order Details Section -->
+                <div class="order-details">
+                    <div class="order-detail__item">
+                        <strong>Order Number:</strong>
+                        <span>#EKT123456</span>
+                    </div>
+                    <div class="order-detail__item">
+                        <strong>Payment Method:</strong>
+                        <span>Cash on Delivery</span>
+                    </div>
+                    <div class="order-detail__item">
+                        <strong>Estimated Delivery:</strong>
+                        <span>3–5 business days</span>
+                    </div>
+                </div>
 
-    <!-- Customer Note -->
-    <section class="section">
-        <div class="container">
-            <div class="success-note">
-                <p>You will receive order updates via WhatsApp and email.</p>
+                <!-- Next Actions -->
+                <div class="next-actions">
+                    <a href="shop.html" class="cta-button">Continue Shopping</a>
+                    <a href="index.html" class="next-actions__link">Back to Home</a>
+                </div>
+
+                <!-- Customer Note -->
+                <div class="customer-note">
+                    <p>You will receive order updates via WhatsApp and email.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -84,25 +81,25 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-container">
-                <div class="footer-column">
+            <div class="footer__content">
+                <div class="footer__section">
                     <h3>EKETAR</h3>
-                    <p>Premium sports jerseys for football and cricket enthusiasts.</p>
+                    <p>Premium Sports Jerseys with Custom Name & Number</p>
                 </div>
                 
-                <div class="footer-column">
+                <div class="footer__section">
                     <h3>Shop</h3>
-                    <ul class="footer-links">
+                    <ul class="footer__nav">
                         <li><a href="shop.html">All Jerseys</a></li>
                         <li><a href="shop.html">Football Jerseys</a></li>
                         <li><a href="shop.html">Cricket Jerseys</a></li>
-                        <li><a href="shop.html">Custom Jerseys</a></li>
+                        <li><a href="shop.html">New Arrivals</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-column">
+                <div class="footer__section">
                     <h3>Support</h3>
-                    <ul class="footer-links">
+                    <ul class="footer__nav">
                         <li><a href="#">Contact Us</a></li>
                         <li><a href="#">Shipping Policy</a></li>
                         <li><a href="#">Returns & Exchanges</a></li>
@@ -110,17 +107,16 @@
                     </ul>
                 </div>
                 
-                <div class="footer-column">
+                <div class="footer__section">
                     <h3>Newsletter</h3>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Your email" class="newsletter-input">
-                        <button type="submit" class="newsletter-button">Subscribe</button>
-                    </form>
+                    <p>Subscribe for updates and offers</p>
+                    <input type="email" placeholder="Enter your email" class="footer__email-input">
+                    <button class="footer__subscribe-btn">Subscribe</button>
                 </div>
             </div>
             
-            <div class="copyright">
-                © 2026 EKETAR. All rights reserved.
+            <div class="footer__copyright">
+                <p>© 2026 EKETAR. All rights reserved.</p>
             </div>
         </div>
     </footer>
